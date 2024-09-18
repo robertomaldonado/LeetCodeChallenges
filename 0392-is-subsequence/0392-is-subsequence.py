@@ -11,10 +11,12 @@ when done and i is len of s then it is a subsqe
 class Solution:
     def isSubsequence(self, s: str, t: str) -> bool:
         i, j = 0, 0
-        while j < len(t) and i < len(s):
+        len_t = len(t)
+        len_s= len(s)
+        while j < len_t and i < len_s:
             if s[i] == t[j]:
                 i+=1
             j+=1
-        if i == len(s):
+        if i == len_s:
             return True
         return False
