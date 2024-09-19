@@ -20,6 +20,7 @@ class Solution:
         ans = 0
         for i in range(len(nums)-1):
             left_sum, right_sum = sums[i] , sums[-1] - sums[i]
-            ans = ans + 1 if left_sum >= right_sum else ans
+            if left_sum >= right_sum:
+                ans += 1
         return ans
         
