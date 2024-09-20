@@ -15,6 +15,6 @@ class Solution:
                 w[i], w[j] = w[j], w[i]
                 i+=1
                 j-=1
-            ans.append("".join(w))
-
-        return " ".join(ans)
+            ans.extend(w)
+            ans.append(" ")
+        return "".join(ans).strip()
