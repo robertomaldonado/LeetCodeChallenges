@@ -9,5 +9,5 @@ class Solution:
         while dummy and dummy.next:
             if dummy.val == dummy.next.val:
                 dummy.next = dummy.next.next
-            else: dummy = dummy.next
+            dummy = dummy.next
         return head
