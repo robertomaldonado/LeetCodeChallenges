@@ -14,15 +14,13 @@ now starting fron last = 1, index 0 => num[1] - last < k: then add to ans, move 
 """
 class Solution:
     def partitionArray(self, nums: List[int], k: int) -> int:
-        nums.sort()
-        ans = 1
-        x = nums[0]
-        
-        for i in range(1, len(nums)):
-            if nums[i] - x > k:
-                x = nums[i]
-                ans += 1
-        
-        return ans
+        count = 1 #There is always a subset
+        sorted_nums = sorted(nums)
+        past_value = sorted_nums[0]
+
+        for i in range(1, len(sorted_nums)):
+            if sorted_nums[i] - past_value > k:
+                past_value = sorted_nums[i]
+                count+=1
 
         return count
