@@ -19,17 +19,14 @@ class Solution:
         pairings = {"(":")", "[":"]", "{":"}" }
                                            
         for item in s:
-            if item in pairings.values() and len(stack) == 0:
-                return False
             if item in pairings.keys():
                 stack.append(item)
-            if item in pairings.values():
-                if  item == pairings[stack[-1]]:
-                    stack.pop()
-                else:
+            else:
+                if len(stack)==0:
                     return False
-            # print(stack)
-        return len(stack) == 0
 
-        return len(stack) == 0
-            
+                prev_opening = stack.pop()
+                if pairings[prev_opening] != item:
+                    return False
+
+        return len(stack)==0
