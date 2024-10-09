@@ -19,12 +19,11 @@ class Solution:
     def minAddToMakeValid(self, s: str) -> int:
         if not s: return 0
         stack = list()
-        parenth = {"(": ")"}
         for c in s:
             if stack:
                 if c == "(":
                     stack.append(c)
-                elif c == ")":
+                else:
                     if stack[-1] == "(":
                         stack.pop()
                     else:
