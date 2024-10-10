@@ -1,4 +1,4 @@
-![Python](https://img.shields.io/badge/python-3.11.3-blue?logo=python)
+![Python](https://img.shields.io/badge/python-3.12-blue?logo=python)
 
 # LeetCodeChallenges
 Collection of LeetCode questions to keep up coding skills!
