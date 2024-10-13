@@ -20,7 +20,6 @@ class Solution:
         # Dequeue each node in the current level, update val with the node's value, and enqueue the left and right children (if they exist).
         while tmp:
             tmp_len  = len(tmp)
-
             ans.append(tmp[-1].val)
 
             for _ in range(tmp_len):
